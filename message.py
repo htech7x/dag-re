@@ -10,7 +10,6 @@ def print_hello():
 with DAG(
     dag_id="simple_hello_dag",
     start_date=datetime(2023, 1, 1),
-    schedule_interval=None,  # Run on demand
     catchup=False,
     tags=["print hello"],
 ) as dag:
