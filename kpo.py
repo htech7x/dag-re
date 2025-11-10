@@ -15,5 +15,5 @@ with DAG(
       #  namespace="astronomer-blue",  # change if needed
         image="python:3.9",
         cmds=["python", "-c"],
-        arguments=["print('Hello from Kubernetes Pod!')"],
+        arguments=["import time; time.sleep(10); print('Hello from Kubernetes Pod!')"],
     )
