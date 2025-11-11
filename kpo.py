@@ -13,8 +13,8 @@ with DAG(
         task_id="say_hello",
         name="hello-pod",
         kubernetes_conn_id="k8s_conn",
-      #  namespace="astronomer-blue",  # change if needed
+        namespace="default",  # change if needed
         image="python:3.9",
         cmds=["python", "-c"],
-        arguments=["import time; time.sleep(10); print('Hello from Kubernetes Pod!')"],
+        arguments=["import time; time.sleep(20); print('Hello from Kubernetes Pod!')"],
     )
