@@ -12,6 +12,7 @@ with DAG(
     run_in_pod = KubernetesPodOperator(
         task_id="say_hello",
         name="hello-pod",
+        kubernetes_conn_id="k8s_conn",
       #  namespace="astronomer-blue",  # change if needed
         image="python:3.9",
         cmds=["python", "-c"],
